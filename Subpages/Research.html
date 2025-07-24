@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Research</title>
+        <link rel="stylesheet" href="../Subpages/Research.css">
+    </head>
+    <body>
+        <div class="container">
+            <nav>
+                <img src="../Images/portfoliodraftlogo.png" class="logo">
+                <ul class="menu">
+                    <li><a href="../index.html#header">Home</a></li>
+                    <li><a href="../index.html#about">About</a></li>
+                    <li><a href="../index.html#services">Research</a></li>
+                    <li><a href="../index.html#portfolio">Projects</a></li>
+                </ul>
+            </nav>
+            <section class="hidden">
+            <div id="data-flow" class="grid-container-first">
+                <div class="main-col-first">
+                    <h1 >Task One: Simplify and Understand Data Flow</h1>
+                </div>
+                <div class="main-col-first">
+                    <img src="../Images/Data%20Flow/Data%20Flow%20Chart%20Draft%20(1).png" style="padding: 0 40px">
+                </div>
+            </div>
+            </section>
+            <section class="hidden">
+            <div class="grid-container">
+                <div class="main-col">
+                    <h1>Change</h1>
+                    <h3>Only allow Therapists to message Providers.</h3>
+                    <p><span>Current Logic:</span> Messaging permission checks are implemented
+                    in middleware.js. Right now, providers and caregivers can message each
+                    other if they share a patient. User roles are determined using
+                    the user_type field in the user_info table.</p>
+                </div>
+                <div class="main-col">
+                    <h1>Implementation</h1>
+                    <p><span>New Logic:</span> Update the sendMessageCheck2 middleware so that only
+                    user_type = 'Therapist' can send messages to user_type = 'provider'.
+                    Explicitly reject messages from user_type = 'patient' to user_type = 'provider'.</p>
+                    <p><span>Drop Down Menu:</span> When generating the recipient list for a patient,
+                    filter out user_type = 'provider'. Only include connected user_type = 'Therapist'.</p>
+                </div>
+            </div>
+            </section>
+            <div class="grid-container-last"></div>
+            <section class="hidden">
+            <div id="med-palm" class="grid-container-first">
+                <div class="main-col-first">
+                    <h1 >Task Two: Research Google Med-Palm 2</h1>
+                </div>
+                <div class="main-col-first">
+                    <img src="../Images/Data%20Flow/Palm-2.jpg" style="padding: 0 40px">
+                </div>
+            </div>
+            </section>
+            <section class="hidden">
+            <div class="grid-container">
+                <div class="main-col">
+                    <h1>Summary</h1>
+                    <p>Med-PaLM is a large language model developed by Google Research,
+                    specifically designed to provide high-quality answers to medical questions.
+                    The second version, Med-PaLM 2, is part of the MedLM family of foundation
+                    models fine-tuned for the healthcare industry and is available to Google
+                    Cloud customers for exploring a range of applications, from basic tasks
+                    to complex workflows.</p>
+                    <p>Med-PaLM 2 has demonstrated significant advancements in medical
+                    question answering. It achieved an accuracy of 86.5% on the MedQA
+                    medical exam benchmark, surpassing the expert-level performance threshold.
+                    Additionally, it was the first AI system to reach a passing score on the
+                    MedMCQA dataset, which comprises Indian AIIMS and NEET medical examination
+                    questions, scoring 72.3%.</p>
+                    <p>Google emphasizes the importance of safety, equity, and bias considerations
+                    in the development and deployment of Med-PaLM 2. The model has been evaluated
+                    against multiple criteria, including scientific consensus, medical reasoning,
+                    knowledge recall, bias, and likelihood of possible harm, with assessments
+                    conducted by clinicians and non-clinicians from diverse backgrounds.</p>
+                </div>
+                <div class="main-col">
+                    <h1>Implementation</h1>
+                    <p><span>Clinical Decision Support:</span> Med-PaLM 2 can provide clinicians with real-time
+                    insights, suggesting potential diagnoses, treatments, and relevant medical
+                    literature based on patient data.</p>
+                    <p><span>Medical Question Answering:</span> Healthcare professionals can use Med-PaLM 2
+                    to quickly find answers to complex medical questions, accessing the latest
+                    research and evidence-based practices.</p>
+                    <p><span>Patient Interaction:</span> Med-PaLM 2 can be integrated into patient portals
+                    and telehealth platforms, providing patients with personalized information
+                    about their conditions and treatment plans.</p>
+                    <p><span>Cloud-Based API:</span> Med-PaLM 2 is typically accessed as a cloud-based
+                    service through an API, allowing developers to integrate it into various
+                    applications and platforms.</p>
+                    <p><span>Client Libraries:</span> Google provides client libraries in different
+                    programming languages to facilitate integration with Med-PaLM 2.</p>
+                </div>
+            </div>
+            </section>
+            <div class="grid-container-last"></div>
+            <section class="hidden">
+            <div id="trigger" class="grid-container-first">
+                <div class="main-col-first">
+                    <h1 >Task Three: Triggers to Daily Activites</h1>
+                </div>
+                <div class="main-col-first">
+                    <img src="../Images/Data%20Flow/Triggers.png">
+                </div>
+            </div>
+            </section>
+            <section class="hidden">
+            <div class="grid-container">
+                <div class="main-col">
+                    <h1>Goal</h1>
+                    <h3>Utilize Github or Visual Studio Code Copilot to update code efficiently.</h3>
+                    <p>This was the first test of using AI to edit and fix code.</p>
+                </div>
+                <div class="main-col">
+                    <h1>Result</h1>
+                    <h3>Visual Studio Code Copilot quickly replaced "Triggers" with
+                    "Daily Activities"</h3>
+                    <p>This allowed for the QA Checklist Brainstorm to continue.</p>
+                </div>
+            </div>
+            </section>
+        </div>
+
+        <footer>
+        <div class="container">
+            <div class="footer-row">
+                <h6>© 2025 Tate Sigmon. All rights reserved.</h6>
+            </div>
+        </div>
+        </footer>
+
+        <script src="../script.js"></script>
+    </body>
+</html>
